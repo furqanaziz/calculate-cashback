@@ -1,0 +1,26 @@
+{
+  "name": "calculate-cashback",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "eslint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pg": "^8.5.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

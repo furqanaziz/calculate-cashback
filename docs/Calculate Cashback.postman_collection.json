@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "58b6cb21-2696-49ae-b684-a372cc755d81",
+		"name": "Calculate Cashback",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Show all customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/customer",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"customer"
+							]
+						},
+						"description": "get all customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_name\": \"Mick Davis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/customer",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"customer"
+							]
+						},
+						"description": "create a customer"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a customer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/customer/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"customer",
+								"1"
+							]
+						},
+						"description": "get a customer by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a customer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_name\": \"Mick Davis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/customer/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"customer",
+								"1"
+							]
+						},
+						"description": "update a customer's name"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/customer/2",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"customer",
+								"2"
+							]
+						},
+						"description": "delete a customer"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ruleset",
+			"item": [
+				{
+					"name": "Show all rulesets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/ruleset",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"ruleset"
+							]
+						},
+						"description": "Show all rulesets"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new ruleset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2020-11-16\",\n    \"endDate\": \"2020-11-30\",\n    \"cashback_amount\": 2.00,\n    \"redemptionLimit\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/ruleset",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"ruleset"
+							]
+						},
+						"description": "Create new ruleset"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a ruleset by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/ruleset/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"ruleset",
+								"1"
+							]
+						},
+						"description": "Show a ruleset by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a ruleset",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2020-11-1\",\n    \"endDate\": \"2020-11-10\",\n    \"cashback_amount\": 8.00,\n    \"redemptionLimit\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/ruleset/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"ruleset",
+								"1"
+							]
+						},
+						"description": "Update a ruleset"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a ruleset",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/ruleset/2",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"ruleset",
+								"2"
+							]
+						},
+						"description": "Delete a ruleset"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Show all transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/transaction",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"transaction"
+							]
+						},
+						"description": "Show all transactions"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2020-11-16\",\n    \"customerId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/transaction",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"transaction"
+							]
+						},
+						"description": "Create new transaction"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a transaction by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/transaction/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"transaction",
+								"1"
+							]
+						},
+						"description": "Show a transaction by id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a transaction",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2020-11-02\",\n    \"customerId\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}api/transaction/1",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"transaction",
+								"1"
+							]
+						},
+						"description": "Update a transaction"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/transaction/2",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"transaction",
+								"2"
+							]
+						},
+						"description": "Delete a transaction"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cashback",
+			"item": [
+				{
+					"name": "Get Cashbacks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}api/cashback",
+							"host": [
+								"{{baseUrl}}api"
+							],
+							"path": [
+								"cashback"
+							]
+						},
+						"description": "Get Cashbacks"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
